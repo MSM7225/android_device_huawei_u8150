@@ -12,25 +12,34 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit device configuration
-$(call inherit-product, $(LOCAL_PATH)/u8160.mk)
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_mini_phone.mk)
+# Specify phone tech before including full_phone
 $(call inherit-product, vendor/cm/config/gsm.mk)
 
-# Setup device configuration
-PRODUCT_NAME := cm_u8160
-PRODUCT_RELEASE_NAME := u8160
-PRODUCT_DEVICE := u8160
-PRODUCT_BRAND := Huawei
-PRODUCT_MODEL := U8160
-PRODUCT_MANUFACTURER := Huawei
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=google/soju/crespo:4.0.4/IMM76D/299849:user/release-keys PRIVATE_BUILD_DESC="soju-user 4.0.4 IMM76D 299849 release-keys"
-
-# Release name and versioning
-PRODUCT_VERSION_DEVICE_SPECIFIC :=
-
+# BootAnimation
 TARGET_BOOTANIMATION_NAME := vertical-240x320
 
-TARGET_NO_LIVEWALLPAPERS := true
+# Inherit device configuration
+$(call inherit-product, device/huawei/u8160/full_u8160.mk)
+
+# Inherit some common cyanogenmod stuff.
+$(call inherit-product, vendor/cm/config/common_mini_phone.mk)
+
+# The gps config appropriate for this device
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
+
+# Device identifier. This must come after all inclusions
+PRODUCT_NAME := cm_u8160
+PRODUCT_DEVICE := u8160
+PRODUCT_BRAND := Huawei
+PRODUCT_MODEL := u8160
+PRODUCT_MANUFACTURER := Huawei
+PRODUCT_CHARACTERISTICS := phone
+
+PRODUCT_RELEASE_NAME := U8160/Smart
+PRODUCT_VERSION_DEVICE_SPECIFIC := -U8160/Smart
+
+# CyanogenMod Properties
+BOARD_NO_LIVEWALLPAPERS := true
+BOARD_NO_CAMERAEFFECTS := true
+BOARD_NO_HWCODECS := true
+BOARD_HAVE_LOWRAM := true

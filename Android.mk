@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2011 The Android Open Source Project
+# Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,8 +11,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),u8160)
-  include $(call all-named-subdir-makefiles, huawei_brcm_patchram_plus libaudio libcamera libcopybit libgralloc liblights libopencorehw librpc libstagefrighthw mm-core recovery rzscontrol U8160Parts)
+LOCAL_PATH := $(call my-dir)
+
+ifeq ($(TARGET_DEVICE),u8160)
+  include $(call all-named-subdir-makefiles, huawei_brcm_patchram_plus libaudio libcamera libcopybit libfmradio libgralloc liblights libopencorehw librpc libstagefrighthw mm-core recovery rzscontrol Gallery2D U8160Parts)
 endif
