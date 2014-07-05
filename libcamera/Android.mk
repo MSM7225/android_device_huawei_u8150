@@ -1,21 +1,32 @@
 LOCAL_PATH := $(call my-dir)
 
-## Make camera wrapper
-
 include $(CLEAR_VARS)
 
-LOCAL_C_FLAGS        += -O3
-LOCAL_MODULE_TAGS    := optional
-LOCAL_MODULE_PATH    := $(TARGET_OUT_SHARED_LIBRARIES)/hw
-LOCAL_MODULE         := camera.$(TARGET_BOOTLOADER_BOARD_NAME)
-LOCAL_SRC_FILES      := cameraHal.cpp
-LOCAL_PRELINK_MODULE := false
+ifneq (,$(findstring $(TARGET_BOARD_PLATFORM),qsd8k msm7k))
 
-LOCAL_SHARED_LIBRARIES := liblog libdl libutils libcamera_client libbinder libcutils libhardware libcamera libui
+LOCAL_C_FLAGS          += -O3
+LOCAL_MODULE_TAGS      := optional
+LOCAL_MODULE_PATH      := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+LOCAL_MODULE           := camera.$(TARGET_BOOTLOADER_BOARD_NAME)
+
+LOCAL_SRC_FILES        := QcomCamera.cpp
+
+LOCAL_SHARED_LIBRARIES := liblog libdl libutils libcamera_client libbinder \
+                          libcutils libhardware libui libcamera
 
 LOCAL_C_INCLUDES       := frameworks/base/services \
                           frameworks/base/include \
-                          hardware/libhardware/include \
-                          hardware
+                          device/huawei/u8160/include
+ifeq ($(TARGET_BOARD_PLATFORM),msm7k)
+LOCAL_C_INCLUDES       += device/huawei/u8160/libgralloc
+LOCAL_C_INCLUDES       += device/huawei/u8160/include
+LOCAL_CFLAGS           := -DPREVIEW_MSM7K
+else
+LOCAL_C_INCLUDES       += hardware/qcom/display/libgralloc
+endif
+
+LOCAL_PRELINK_MODULE   := false
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif
