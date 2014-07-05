@@ -34,9 +34,9 @@
 
 #include <hardware/copybit.h>
 
-#include "../libgralloc/gralloc_priv.h"
+#include <gralloc/gralloc_priv.h>
 
-#define DEBUG_MDP_ERRORS 1
+#define DEBUG_MDP_ERRORS 0
 
 /******************************************************************************/
 
