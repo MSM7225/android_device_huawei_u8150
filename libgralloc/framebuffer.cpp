@@ -36,7 +36,7 @@
 #include <linux/fb.h>
 #include <linux/msm_mdp.h>
 
-#include "gralloc_priv.h"
+#include <gralloc/gralloc_priv.h>
 #include "gr.h"
 
 /*****************************************************************************/
@@ -193,8 +193,9 @@ int mapFrameBufferLocked(struct private_module_t* module)
     info.transp.length  = 0;
 
     /*
-     * Request NUM_BUFFERS screens (at lest 2 for page flipping)
+     * Request NUM_BUFFERS screens (at least 2 for page flipping)
      */
+     
     info.yres_virtual = info.yres * NUM_BUFFERS;
 
 
@@ -216,17 +217,11 @@ int mapFrameBufferLocked(struct private_module_t* module)
     if (ioctl(fd, FBIOGET_VSCREENINFO, &info) == -1)
         return -errno;
 
-    int refreshRate = 1000000000000000LLU /
-    (
-            uint64_t( info.upper_margin + info.lower_margin + info.yres )
-            * ( info.left_margin  + info.right_margin + info.xres )
-            * info.pixclock
-    );
-
-    if (refreshRate == 0) {
-        // bleagh, bad info from the driver
-        refreshRate = 60*1000;  // 60 Hz
-    }
+	/*
+     * Hard-Code Screen Refresh Rate (MSM7x25 FB Bug)
+     */
+     
+    int refreshRate = 60*1000; // 60 Hz
 
     if (int(info.width) <= 0 || int(info.height) <= 0) {
         // the driver doesn't return that information

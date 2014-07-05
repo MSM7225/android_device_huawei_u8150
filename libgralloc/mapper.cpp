@@ -34,7 +34,7 @@
 
 #include <linux/android_pmem.h>
 
-#include "gralloc_priv.h"
+#include <gralloc/gralloc_priv.h>
 
 
 // we need this for now because pmem cannot mmap at an offset

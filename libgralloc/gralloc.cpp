@@ -37,7 +37,7 @@
 #include <linux/msm_hw3d.h>
 #include <linux/android_pmem.h>
 
-#include "gralloc_priv.h"
+#include <gralloc/gralloc_priv.h>
 #include "allocator.h"
 
 /*****************************************************************************/
