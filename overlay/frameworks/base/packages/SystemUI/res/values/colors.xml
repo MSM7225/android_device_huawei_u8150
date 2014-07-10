@@ -18,4 +18,5 @@
 -->
 <resources>
     <drawable name="notification_tracking_bg">#ff000000</drawable>
+    <drawable name="status_bar_recents_background_solid">#ff000000</drawable>
 </resources>
