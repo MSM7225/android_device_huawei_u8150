@@ -65,18 +65,18 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8160/prebuilt/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt
     
 # Radio FM (test)
-PRODUCT_PACKAGES += \
-    Effem \
-    libfmradio.bcm4329 \
-    hcitool \
-    hciconfig
+#PRODUCT_PACKAGES += \
+#    Effem \
+#    libfmradio.bcm4329 \
+#    hcitool \
+#    hciconfig
 
 # Video decoding
-PRODUCT_PACKAGES += \
-    libstagefrighthw \
-    libopencorehw \
-    libmm-omxcore \
-    libOmxCore
+#PRODUCT_PACKAGES += \
+#    libstagefrighthw \
+#    libopencorehw \
+#    libmm-omxcore \
+#    libOmxCore
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -158,8 +158,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=32m \
     dalvik.vm.execution-mode=int:jit \
-    dalvik.vm.debug.alloc=0 \
-    dalvik.vm.dexopt-data-only=1 \
     dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
 
 # Extended JNI checks
@@ -175,8 +173,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=adb,mass_storage \
     persist.adb.notify=0 \
     persist.service.adb.enable=1 \
-    persist.sys.root_access=3
+    persist.sys.root_access=1
     
+# Usb Accessory
+PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory
+   
 # Vold
 PRODUCT_COPY_FILES += \
     device/huawei/u8160/prebuilt/etc/vold.fstab:system/etc/vold.fstab
