@@ -241,8 +241,8 @@ PRODUCT_COPY_FILES += \
 # Enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.locationfeatures=1 \
-    ro.com.google.networklocation=1
+    ro.com.google.locationfeatures=0 \
+    ro.com.google.networklocation=0
     
 # Enable repeatable keys in CWM Recovery
 PRODUCT_PROPERTY_OVERRIDES += \
