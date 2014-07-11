@@ -81,6 +81,11 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.u8160
+
+# Camcorder Hack
+PRODUCT_COPY_FILES += \
+    device/huawei/u8160/prebuilt/app/Camcorder.apk:system/app/Camcorder.apk \
+    device/huawei/u8160/prebuilt/lib/libandroid-illusion.so:system/lib/libandroid-illusion.so
     
 # Media
 PRODUCT_COPY_FILES += \
