@@ -20,9 +20,9 @@
     <!-- When items are dropped on the mini screens in customize mode, we have a bounce animation
          of the bright green hover outline, and then fade out the outline at the end. These are
          the values used in that animation -->
-    <integer name="config_screenOnDropScalePercent">100</integer>
-    <integer name="config_screenOnDropScaleUpDuration">0</integer>
-    <integer name="config_screenOnDropScaleDownDuration">0</integer>
+    <integer name="config_screenOnDropScalePercent">120</integer>
+    <integer name="config_screenOnDropScaleUpDuration">200</integer>
+    <integer name="config_screenOnDropScaleDownDuration">200</integer>
     <integer name="config_screenOnDropAlphaFadeDelay">0</integer>
     <integer name="config_screenOnDropAlphaFadeDuration">0</integer>
 
@@ -30,7 +30,7 @@
          Note: This should be less than the workspaceShrinkTime as they happen together. -->
     <integer name="config_appsCustomizeZoomInTime">0</integer>
     <integer name="config_appsCustomizeZoomOutTime">0</integer>
-    <integer name="config_appsCustomizeZoomScaleFactor">100</integer>
+    <integer name="config_appsCustomizeZoomScaleFactor">7</integer>
     <integer name="config_appsCustomizeFadeInTime">0</integer>
     <integer name="config_appsCustomizeFadeOutTime">0</integer>
     <integer name="config_appsCustomizeWorkspaceShrinkTime">0</integer>
@@ -77,7 +77,7 @@
     <integer name="config_folderAnimDuration">0</integer>
 
     <!-- The distance at which the animation should take the max duration -->
-    <integer name="config_dropAnimMaxDist">100</integer>
+    <integer name="config_dropAnimMaxDist">800</integer>
 
     <!-- Workspace screens are cached to bitmaps only when they're smaller than a certain size
          (maxScaleForUsingWorkspaceScreenBitmapCache), since the bitmap cache itself is smaller
