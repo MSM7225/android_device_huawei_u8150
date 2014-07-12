@@ -1,5 +1,0 @@
-<resources>
-    <bool name="config_hardwareAccelerated">false</bool>
-    <!-- Which default transition effect to use on the AppsCustomize -->
-    <string name="config_drawerDefaultTransitionEffect">Standard</string>
-</resources>

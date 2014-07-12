@@ -1,0 +1,53 @@
+<resources>
+    <bool name="config_hardwareAccelerated">false</bool>
+    
+    <bool name="config_cyanogenmod">true</bool>
+    
+<!-- AllApps/Customize/AppsCustomize -->
+    <!-- Which default transition effect to use on the AppsCustomize -->
+    <string name="config_drawerDefaultTransitionEffect">Standard</string>
+    
+    <!-- Fade in/out duration of icons being dragged from the trays -->
+    <integer name="config_dragAppsCustomizeIconFadeInDuration">0</integer>
+    <integer name="config_dragAppsCustomizeIconFadeOutDuration">0</integer>
+    <integer name="config_dragAppsCustomizeIconFadeAlpha">0</integer>
+    
+    <!-- When items are dropped on the mini screens in customize mode, we have a bounce animation
+         of the bright green hover outline, and then fade out the outline at the end. These are
+         the values used in that animation -->
+    <integer name="config_screenOnDropScalePercent">0</integer>
+    <integer name="config_screenOnDropScaleUpDuration">0</integer>
+    <integer name="config_screenOnDropScaleDownDuration">0</integer>
+    <integer name="config_screenOnDropAlphaFadeDelay">0</integer>
+    <integer name="config_screenOnDropAlphaFadeDuration">0</integer>
+    
+    <!-- Fade/zoom in/out duration & scale in the AllApps transition.
+         Note: This should be less than the workspaceShrinkTime as they happen together. -->
+    <integer name="config_appsCustomizeZoomInTime">0</integer>
+    <integer name="config_appsCustomizeZoomOutTime">0</integer>
+    <integer name="config_appsCustomizeZoomScaleFactor">0</integer>
+    <integer name="config_appsCustomizeFadeInTime">0</integer>
+    <integer name="config_appsCustomizeFadeOutTime">0</integer>
+    <integer name="config_appsCustomizeWorkspaceShrinkTime">0</integer>
+    <integer name="config_appsCustomizeWorkspaceAnimationStagger">0</integer>
+    <integer name="config_workspaceAppsCustomizeAnimationStagger">0</integer>
+    
+<!-- Workspace -->
+    <!-- Whether or not the drop targets drop down as opposed to fade in -->
+    <bool name="config_useDropTargetDownTransition">false</bool>    
+    
+    <!-- The transition duration for the background of the drop targets -->
+    <integer name="config_dropTargetBgTransitionDuration">0</integer>
+
+    <integer name="config_crosshairsFadeInTime">0</integer>
+
+    <!-- Parameters controlling the animation for when an item is dropped on the home screen,
+         and it animates from its old position to the new one. -->
+    <integer name="config_dropAnimMaxDuration">0</integer>
+
+    <!-- The duration of the UserFolder opening and closing animation -->
+    <integer name="config_folderAnimDuration">0</integer>
+
+    <!-- The distance at which the animation should take the max duration -->
+    <integer name="config_dropAnimMaxDist">0</integer>
+</resources>
