@@ -22,7 +22,7 @@ LOCAL_JAVA_LIBRARIES := android.test.runner
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
-LOCAL_PACKAGE_NAME := TrebuchetLauncherRotationStressTest
+LOCAL_PACKAGE_NAME := OptiTrebuchetLauncherRotationStressTest
 
 LOCAL_CERTIFICATE := shared
 
