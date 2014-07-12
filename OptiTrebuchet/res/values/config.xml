@@ -1,5 +1,5 @@
 <resources>
-    <bool name="config_hardwareAccelerated">false</bool>
+    <bool name="config_hardwareAccelerated">true</bool>
     <bool name="config_largeHeap">false</bool>
     <bool name="config_defaultAutoRotate">false</bool>
 
@@ -20,7 +20,7 @@
     <!-- When items are dropped on the mini screens in customize mode, we have a bounce animation
          of the bright green hover outline, and then fade out the outline at the end. These are
          the values used in that animation -->
-    <integer name="config_screenOnDropScalePercent">0</integer>
+    <integer name="config_screenOnDropScalePercent">100</integer>
     <integer name="config_screenOnDropScaleUpDuration">0</integer>
     <integer name="config_screenOnDropScaleDownDuration">0</integer>
     <integer name="config_screenOnDropAlphaFadeDelay">0</integer>
@@ -30,7 +30,7 @@
          Note: This should be less than the workspaceShrinkTime as they happen together. -->
     <integer name="config_appsCustomizeZoomInTime">0</integer>
     <integer name="config_appsCustomizeZoomOutTime">0</integer>
-    <integer name="config_appsCustomizeZoomScaleFactor">0</integer>
+    <integer name="config_appsCustomizeZoomScaleFactor">100</integer>
     <integer name="config_appsCustomizeFadeInTime">0</integer>
     <integer name="config_appsCustomizeFadeOutTime">0</integer>
     <integer name="config_appsCustomizeWorkspaceShrinkTime">0</integer>
@@ -64,7 +64,7 @@
 
     <!-- The duration (in ms) of the fade animation on the object outlines, used when
          we are dragging objects around on the home screen. -->
-    <integer name="config_dragOutlineFadeTime">900</integer>
+    <integer name="config_dragOutlineFadeTime">0</integer>
 
     <!-- The alpha value at which to show the most recent drop visualization outline. -->
     <integer name="config_dragOutlineMaxAlpha">128</integer>
@@ -77,7 +77,7 @@
     <integer name="config_folderAnimDuration">0</integer>
 
     <!-- The distance at which the animation should take the max duration -->
-    <integer name="config_dropAnimMaxDist">0</integer>
+    <integer name="config_dropAnimMaxDist">100</integer>
 
     <!-- Workspace screens are cached to bitmaps only when they're smaller than a certain size
          (maxScaleForUsingWorkspaceScreenBitmapCache), since the bitmap cache itself is smaller

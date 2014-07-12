@@ -84,7 +84,7 @@
                 <CheckBoxPreference android:key="ui_homescreen_scrolling_scroll_wallpaper"
                     android:title="@string/preferences_interface_homescreen_scrolling_scroll_wallpaper_title"
                     android:summary="@string/preferences_interface_homescreen_scrolling_scroll_wallpaper_summary"
-                    android:defaultValue="true" />
+                    android:defaultValue="false" />
 		<CheckBoxPreference android:key="ui_homescreen_scrolling_loop_pages"
 		    android:title="@string/preferences_interface_homescreen_scrolling_loop_pages_title"
 		    android:summary="@string/preferences_interface_homescreen_scrolling_loop_pages_summary"
@@ -99,7 +99,7 @@
                 <CheckBoxPreference android:key="ui_homescreen_indicator_fade"
                     android:title="@string/preferences_interface_homescreen_indicator_fade_title"
                     android:summary="@string/preferences_interface_homescreen_indicator_fade_summary"
-                    android:defaultValue="true"
+                    android:defaultValue="false"
                     android:dependency="ui_homescreen_indicator_enable" />
                 <CheckBoxPreference android:key="ui_homescreen_indicator_background"
                     android:title="@string/preferences_interface_homescreen_indicator_background_title"
@@ -137,7 +137,7 @@
                 <CheckBoxPreference android:key="ui_drawer_indicator_fade"
                     android:title="@string/preferences_interface_drawer_indicator_fade_title"
                     android:summary="@string/preferences_interface_drawer_indicator_fade_summary"
-                    android:defaultValue="true"
+                    android:defaultValue="false"
                     android:dependency="ui_drawer_indicator_enable" />
             </PreferenceCategory>
         </PreferenceScreen>

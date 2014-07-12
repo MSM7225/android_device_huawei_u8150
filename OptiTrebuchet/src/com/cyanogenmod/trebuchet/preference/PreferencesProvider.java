@@ -32,7 +32,7 @@ public final class PreferencesProvider {
         public static class Homescreen {
             public static int getNumberHomescreens(Context context) {
                 final SharedPreferences preferences = context.getSharedPreferences(PREFERENCES_KEY, 0);
-                return preferences.getInt("ui_homescreen_screens", 3);
+                return preferences.getInt("ui_homescreen_screens", 5);
             }
             public static int getDefaultHomescreen(Context context, int def) {
                 final SharedPreferences preferences = context.getSharedPreferences(PREFERENCES_KEY, 0);
