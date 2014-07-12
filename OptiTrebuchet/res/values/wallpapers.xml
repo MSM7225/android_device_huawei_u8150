@@ -17,7 +17,5 @@
 
 <resources>
     <string-array name="wallpapers" translatable="false">
-        <item>wallpaper_canyon</item>
-        <item>wallpaper_kepler</item>
     </string-array>
 </resources>

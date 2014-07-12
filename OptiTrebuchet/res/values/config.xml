@@ -30,7 +30,7 @@
          Note: This should be less than the workspaceShrinkTime as they happen together. -->
     <integer name="config_appsCustomizeZoomInTime">0</integer>
     <integer name="config_appsCustomizeZoomOutTime">0</integer>
-    <integer name="config_appsCustomizeZoomScaleFactor">7</integer>
+    <integer name="config_appsCustomizeZoomScaleFactor">0</integer>
     <integer name="config_appsCustomizeFadeInTime">0</integer>
     <integer name="config_appsCustomizeFadeOutTime">0</integer>
     <integer name="config_appsCustomizeWorkspaceShrinkTime">0</integer>
