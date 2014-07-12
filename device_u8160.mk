@@ -103,7 +103,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Packages
 PRODUCT_PACKAGES += \
-    Gallery2D
+    Gallery2D \
+    OptiTrebuchet
     
 # Replace Gallery2D with QuickPic
 PRODUCT_COPY_FILES += \
@@ -111,9 +112,9 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8160/prebuilt/lib/libqpicjni136.so:system/lib/libqpicjni136.so
     
 # Replace Trebuchet with Nova Launcher
-PRODUCT_COPY_FILES += \
-    device/huawei/u8160/prebuilt/app/NovaLauncher.apk:system/app/Trebuchet.apk \
-    device/huawei/u8160/prebuilt/lib/libgif.so:system/lib/libgif.so
+#PRODUCT_COPY_FILES += \
+#    device/huawei/u8160/prebuilt/app/NovaLauncher.apk:system/app/Trebuchet.apk \
+#    device/huawei/u8160/prebuilt/lib/libgif.so:system/lib/libgif.so
 
 # GPS
 PRODUCT_PACKAGES += \
