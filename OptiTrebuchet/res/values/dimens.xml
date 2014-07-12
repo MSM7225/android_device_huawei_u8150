@@ -32,7 +32,7 @@
     <dimen name="qsb_padding_right">0dp</dimen>
     <dimen name="search_bar_height">40dp</dimen>
     <dimen name="workspace_cell_width">80dp</dimen>
-    <dimen name="workspace_cell_height">100dp</dimen>
+    <dimen name="workspace_cell_height">70dp</dimen>
     <dimen name="workspace_width_gap">-1dp</dimen>
     <dimen name="workspace_height_gap">-1dp</dimen>
     <dimen name="workspace_max_gap">16dp</dimen>
@@ -48,7 +48,7 @@
     <dimen name="hotseat_height_gap">-1dp</dimen>
     <dimen name="workspace_overscroll_drawable_padding">0dp</dimen>
 
-    <dimen name="app_icon_padding_top">8dp</dimen>
+    <dimen name="app_icon_padding_top">2dp</dimen>
 
 <!-- QSB -->
     <dimen name="toolbar_button_vertical_padding">0dip</dimen>
@@ -74,14 +74,14 @@
     <dimen name="title_texture_width">120px</dimen>
 
     <!-- height of the bottom row of controls -->
-    <dimen name="button_bar_height">62dip</dimen>
+    <dimen name="button_bar_height">50dip</dimen>
     <!-- Because portal animations go beyond the bounds of an icon, we need
          to make the dock layout slightly larger than the button_bar_height -->
     <dimen name="button_bar_height_top_padding">8dp</dimen>
     <dimen name="button_bar_height_bottom_padding">0dp</dimen>
     <dimen name="button_bar_width_left_padding">0dp</dimen>
     <dimen name="button_bar_width_right_padding">0dp</dimen>
-    <dimen name="button_bar_height_plus_padding">70dp</dimen>
+    <dimen name="button_bar_height_plus_padding">58dp</dimen>
 
     <!-- extra horizontal spacing between mini screen thumbnails ie. in all
          apps and in customization mode -->
@@ -122,7 +122,7 @@
 
 <!-- Folders -->
     <!-- The size of the image which sits behind the preview of the folder contents -->
-    <dimen name="folder_preview_size">62dp</dimen>
+    <dimen name="folder_preview_size">55dp</dimen>
     <!-- The amount that the preview contents are inset from the preview background -->
     <dimen name="folder_preview_padding">4dp</dimen>
     <dimen name="folder_name_padding">10dp</dimen>

@@ -35,8 +35,8 @@
         launcher:x="0"
         launcher:y="3" />
     <favorite
-        launcher:packageName="com.android.gallery3d"
-        launcher:className="com.android.gallery3d.app.Gallery"
+        launcher:packageName="com.alensw.PicFolder"
+        launcher:className="com.alensw.PicFolder.Gallery"
         launcher:screen="2"
         launcher:x="3"
         launcher:y="3" />
