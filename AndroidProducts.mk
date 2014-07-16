@@ -26,4 +26,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_u8160.mk
+    $(LOCAL_DIR)/full_u8150.mk

@@ -19,7 +19,7 @@ $(call inherit-product, vendor/cm/config/gsm.mk)
 TARGET_BOOTANIMATION_NAME := vertical-240x320
 
 # Inherit device configuration
-$(call inherit-product, device/huawei/u8160/full_u8160.mk)
+$(call inherit-product, device/huawei/u8150/full_u8150.mk)
 
 # Inherit some common cyanogenmod stuff.
 $(call inherit-product, vendor/cm/config/common_mini_phone.mk)
@@ -28,15 +28,15 @@ $(call inherit-product, vendor/cm/config/common_mini_phone.mk)
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_u8160
-PRODUCT_DEVICE := u8160
+PRODUCT_NAME := cm_u8150
+PRODUCT_DEVICE := u8150
 PRODUCT_BRAND := Huawei
-PRODUCT_MODEL := u8160
+PRODUCT_MODEL := u8150
 PRODUCT_MANUFACTURER := Huawei
 PRODUCT_CHARACTERISTICS := phone
 
-PRODUCT_RELEASE_NAME := U8160/Smart
-PRODUCT_VERSION_DEVICE_SPECIFIC := -U8160/Smart
+PRODUCT_RELEASE_NAME := U8150/Ideos
+PRODUCT_VERSION_DEVICE_SPECIFIC := -U8150/Ideos
 
 # CyanogenMod Properties
 BOARD_NO_LIVEWALLPAPERS := true

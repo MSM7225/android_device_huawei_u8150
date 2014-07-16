@@ -19,12 +19,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
 # Inherit device specific files
-$(call inherit-product, device/huawei/u8160/device_u8160.mk)
+$(call inherit-product, device/huawei/u8150/device_u8150.mk)
 
 # Overrides
-PRODUCT_NAME := full_u8160
-PRODUCT_DEVICE := u8160
+PRODUCT_NAME := full_u8150
+PRODUCT_DEVICE := u8150
 PRODUCT_BRAND := Huawei
 PRODUCT_MANUFACTURER := huawei
-PRODUCT_MODEL := u8160
+PRODUCT_MODEL := u8150
 PRODUCT_CHARACTERISTICS := phone

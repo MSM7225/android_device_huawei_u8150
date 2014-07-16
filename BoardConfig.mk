@@ -28,11 +28,11 @@ TARGET_CPU_ABI := armeabi-v6j
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv6j
 TARGET_ARCH_VARIANT_CPU := arm1136ej-s
-TARGET_SPECIFIC_HEADER_PATH := device/huawei/u8160/include
+TARGET_SPECIFIC_HEADER_PATH := device/huawei/u8150/include
 
 # Target Properties
-TARGET_BOOTLOADER_BOARD_NAME := u8160
-TARGET_OTA_ASSERT_DEVICE := u8160,hwu8160,u8180,hwu8180
+TARGET_BOOTLOADER_BOARD_NAME := u8150
+TARGET_OTA_ASSERT_DEVICE := u8150,hwu8150,ideos,U8150
 
 # Target Information
 TARGET_NO_BOOTLOADER := true
@@ -48,7 +48,7 @@ BOARD_HAVE_HUAWEI_BLUETOOTH := true
 # GPS
 BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := u8160
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := u8150
 
 # Browser
 JS_ENGINE := v8
@@ -85,7 +85,7 @@ BOARD_PROVIDES_LIBRIL := true
 
 # Graphics
 USE_OPENGL_RENDERER := false
-BOARD_EGL_CFG := device/huawei/u8160/prebuilt/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/huawei/u8150/prebuilt/lib/egl/egl.cfg
 BOARD_NO_RGBX_8888 := true
 COMMON_GLOBAL_CFLAGS += -DNO_RGBX_8888
 COMMON_GLOBAL_CFLAGS += -DMISSING_EGL_EXTERNAL_IMAGE 
@@ -118,19 +118,19 @@ BOARD_WLAN_DEVICE := bcm4329
 BOARD_WLAN_DEVICE_REV := bcm4329
 
 WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
-WIFI_DRIVER_FW_PATH_AP := "/system/wifi/firmware_apsta.bin"
-WIFI_DRIVER_FW_PATH_P2P := "/system/wifi/firmware_apsta.bin"
-WIFI_DRIVER_FW_PATH_STA := "/system/wifi/firmware.bin"
+WIFI_DRIVER_FW_PATH_AP := "/system/etc/fw_4319_apsta.bin"
+WIFI_DRIVER_FW_PATH_P2P := "/system/etc/fw_4319_apsta.bin"
+WIFI_DRIVER_FW_PATH_STA := "/system/etc/fw_4319.bin"
 WIFI_DRIVER_MODULE_NAME := "dhd"
-WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/wifi/firmware.bin nvram_path=/data/misc/wifi/nvram.txt iface_name=wlan"
+WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/fw_4319.bin nvram_path=/system/etc/nv_4319.txt"
 
 # Minimal fonts
 SMALLER_FONT_FOOTPRINT := true
 #MINIMAL_FONT_FOOTPRINT := true ## Inexistent on ICS
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/huawei/u8160/recovery/recovery.fstab
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/u8160/recovery/recovery_keys.c
+TARGET_RECOVERY_FSTAB := device/huawei/u8150/recovery/recovery.fstab
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/u8150/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := "<font_7x16.h>"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
 BOARD_LDPI_RECOVERY := true
@@ -138,13 +138,13 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/huawei/msm7x25-common
-TARGET_KERNEL_CONFIG := hw_msm7x25_cm9_defconfig
+TARGET_KERNEL_CONFIG := hw_msm7x25_cm9_u8150_defconfig
 BOARD_KERNEL_BASE := 0x00200000
-BOARD_KERNEL_CMDLINE := mem=211M console=ttyMSM2,115200n8 androidboot.hardware=u8160
+BOARD_KERNEL_CMDLINE := mem=211M console=ttyMSM2,115200n8 androidboot.hardware=u8150
 BOARD_KERNEL_PAGESIZE := 4096
 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_FLASH_BLOCK_SIZE := 262144
-#TARGET_PREBUILT_KERNEL := device/huawei/u8160/prebuilt/kernel ## Now compiled from sources
+#TARGET_PREBUILT_KERNEL := device/huawei/u8150/prebuilt/kernel ## Now compiled from sources
 
 # Init
 TARGET_PROVIDES_INIT_RC := true

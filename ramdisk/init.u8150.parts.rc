@@ -1,7 +1,7 @@
 on boot
 
-# U8160Parts - helper service
-service u8160parts /system/bin/sh /system/bin/handle_u8160parts
+# U8150Parts - helper service
+service u8150parts /system/bin/sh /system/bin/handle_u8150parts
     class main
     user root
     group root
@@ -17,4 +17,4 @@ on property:persist.sys.swap=1
     exec /system/xbin/swapon /dev/block/mmcblk0p3
 
 on property:persist.sys.read_ahead_kb=*
-    start u8160parts
+    start u8150parts

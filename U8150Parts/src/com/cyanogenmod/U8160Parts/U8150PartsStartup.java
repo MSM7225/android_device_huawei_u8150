@@ -13,7 +13,7 @@ import android.preference.PreferenceManager;
 //import java.io.FileNotFoundException;
 //import java.io.IOException;
 
-public class U8160PartsStartup extends BroadcastReceiver
+public class U8150PartsStartup extends BroadcastReceiver
 {
     // Apply process limit
     public int processLimit;

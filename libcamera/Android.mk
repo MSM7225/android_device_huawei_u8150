@@ -16,10 +16,10 @@ LOCAL_SHARED_LIBRARIES := liblog libdl libutils libcamera_client libbinder \
 
 LOCAL_C_INCLUDES       := frameworks/base/services \
                           frameworks/base/include \
-                          device/huawei/u8160/include
+                          device/huawei/u8150/include
 ifeq ($(TARGET_BOARD_PLATFORM),msm7k)
-LOCAL_C_INCLUDES       += device/huawei/u8160/libgralloc
-LOCAL_C_INCLUDES       += device/huawei/u8160/include
+LOCAL_C_INCLUDES       += device/huawei/u8150/libgralloc
+LOCAL_C_INCLUDES       += device/huawei/u8150/include
 LOCAL_CFLAGS           := -DPREVIEW_MSM7K
 else
 LOCAL_C_INCLUDES       += hardware/qcom/display/libgralloc

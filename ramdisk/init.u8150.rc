@@ -1,5 +1,5 @@
-import init.u8160.usb.rc
-import init.u8160.parts.rc
+import init.u8150.usb.rc
+import init.u8150.parts.rc
 
 on early-init
 
@@ -93,18 +93,6 @@ service iprenew_bnep0 /system/bin/dhcpcd -n
     oneshot
 
 service akmd /system/bin/akmd2
-    class main
-    user compass
-    group compass misc input
-    disabled
-
-service akm8975 /system/bin/akmd8975
-    class main
-    user compass
-    group compass misc input
-    disabled
-
-service akm8962 /system/bin/akmd8962
     class main
     user compass
     group compass misc input
