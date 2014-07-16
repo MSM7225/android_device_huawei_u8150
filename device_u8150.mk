@@ -121,8 +121,8 @@ PRODUCT_PACKAGES += \
     gps.u8150
     
 # Bluetooth
-PRODUCT_PACKAGES += \
-    huawei_brcm_patchram_plus
+#PRODUCT_PACKAGES += \
+#    huawei_brcm_patchram_plus
     
 # Bluetooth Config
 PRODUCT_COPY_FILES += \
