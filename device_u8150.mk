@@ -178,8 +178,8 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8150/prebuilt/bin/handle_u8150parts:system/bin/handle_u8150parts
     
 # Huawei Hardware setup
-PRODUCT_COPY_FILES += \
-    device/huawei/u8150/prebuilt/etc/init.d/02setuphuawei:system/etc/init.d/02setuphuawei
+#PRODUCT_COPY_FILES += \
+#    device/huawei/u8150/prebuilt/etc/init.d/02setuphuawei:system/etc/init.d/02setuphuawei
     
 # zRAM
 PRODUCT_PACKAGES += \
