@@ -137,8 +137,8 @@ BOARD_LDPI_RECOVERY := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/huawei/msm7x25-common
-TARGET_KERNEL_CONFIG := hw_msm7x25_cm9_u8150_defconfig
+TARGET_KERNEL_SOURCE := kernel/huawei/u8150
+TARGET_KERNEL_CONFIG := cyanogen_u8150_defconfig
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_KERNEL_CMDLINE := mem=211M console=ttyMSM2,115200n8 androidboot.hardware=u8150
 BOARD_KERNEL_PAGESIZE := 4096
