@@ -112,14 +112,10 @@ COMMON_GLOBAL_CFLAGS += -DSQLITE_NO_SYNC ## Performance Test
 # Wi-Fi
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_wext
-WIFI_BAND := 802_11_ABG
-BOARD_WLAN_DEVICE := bcm4329
-BOARD_WLAN_DEVICE_REV := bcm4329
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
 
 WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
 WIFI_DRIVER_FW_PATH_AP := "/system/etc/fw_4319_apsta.bin"
-WIFI_DRIVER_FW_PATH_P2P := "/system/etc/fw_4319_apsta.bin"
 WIFI_DRIVER_FW_PATH_STA := "/system/etc/fw_4319.bin"
 WIFI_DRIVER_MODULE_NAME := "dhd"
 WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/fw_4319.bin nvram_path=/system/etc/nv_4319.txt"

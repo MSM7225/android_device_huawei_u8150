@@ -232,7 +232,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Note that the only such settings should be the ones that are too low-level to
 # be reachable from resources or other mechanisms.
 PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0 \
+    wifi.interface=eth0 \
     mobiledata.interfaces=rmnet0,rmnet1,rmnet2
     
 # Wifi interface
