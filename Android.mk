@@ -15,5 +15,5 @@
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),u8150)
-  include $(call all-named-subdir-makefiles, huawei_brcm_patchram_plus libaudio libcamera libcopybit libfmradio libgralloc liblights libopencorehw librpc libstagefrighthw mm-core recovery rzscontrol Gallery2D OptiTrebuchet U8150Parts)
+  include $(call all-named-subdir-makefiles, libaudio libcamera libcopybit libfmradio libgralloc liblights libopencorehw librpc libstagefrighthw mm-core recovery rzscontrol Gallery2D OptiTrebuchet U8150Parts)
 endif
