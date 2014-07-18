@@ -13,6 +13,7 @@
 # limitations under the License.
 
 # Inherit products
+$(call inherit-product, vendor/huawei/msm7x25-common/vendor.mk)
 $(call inherit-product, vendor/huawei/u8150/vendor.mk)
 
 # Add device package overlay
@@ -242,9 +243,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wi-Fi related
 PRODUCT_COPY_FILES += \
     device/huawei/u8150/prebuilt/lib/modules/dhd.ko:system/lib/modules/dhd.ko \
-    device/huawei/u8150/prebuilt/etc/fw_4319.bin:system/etc/fw_4319.bin \
-    device/huawei/u8150/prebuilt/etc/fw_4319_apsta.bin:system/etc/fw_4319_apsta.bin \
-    device/huawei/u8150/prebuilt/etc/nv_4319.txt:system/etc/nv_4319.txt \
     device/huawei/u8150/prebuilt/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
     device/huawei/u8150/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
