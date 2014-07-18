@@ -37,7 +37,12 @@ PRODUCT_COPY_FILES += \
   
 # Wi-Fi related
 PRODUCT_COPY_FILES += \
-    device/huawei/u8150/prebuilt/lib/modules/dhd.ko:system/lib/modules/dhd.ko    
+    device/huawei/u8150/prebuilt/lib/modules/dhd.ko:system/lib/modules/dhd.ko \
+    device/huawei/u8150/prebuilt/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
+    device/huawei/u8150/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=eth0    
     
 # Touchscreen
 PRODUCT_COPY_FILES += \
