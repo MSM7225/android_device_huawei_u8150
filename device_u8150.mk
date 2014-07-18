@@ -72,6 +72,10 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8150/prebuilt/usr/keylayout/melfas-touchscreen_ver23.kl:system/usr/keylayout/melfas-touchscreen_ver23.kl \
     device/huawei/u8150/prebuilt/usr/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl
 
+# Huawei Hardware setup
+PRODUCT_COPY_FILES += \
+    device/huawei/u8150/prebuilt/etc/init.d/02setuphuawei:system/etc/init.d/02setuphuawei
+
 # Init files
 PRODUCT_COPY_FILES += \
     device/huawei/u8150/ramdisk/init.u8150.rc:root/init.u8150.rc \
