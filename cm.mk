@@ -18,7 +18,7 @@ LOCAL_PATH := $(call my-dir)
 $(call inherit-product, device/huawei/msm7x25-common/full_msm7x25-common.mk)
 
 # Inherit device configuration
-$(call inherit-product, $(LOCAL_PATH)/full_u8150.mk)
+$(call inherit-product, device/huawei/u8150/full_u8150.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_u8150
