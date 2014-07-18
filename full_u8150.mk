@@ -24,3 +24,6 @@ $(call inherit-product, device/huawei/u8150/device_u8150.mk)
 PRODUCT_NAME := full_u8150
 PRODUCT_DEVICE := u8150
 PRODUCT_MODEL := u8150
+PRODUCT_BRAND := Huawei
+PRODUCT_MANUFACTURER := huawei
+PRODUCT_CHARACTERISTICS := phone
