@@ -113,16 +113,3 @@ service akmd /system/bin/akmd2
     class main
     user compass
     group compass misc input
-    disabled
-
-service akm8975 /system/bin/akmd8975
-    class main
-    user compass
-    group compass misc input
-    disabled
-
-service akm8962 /system/bin/akmd8962
-    class main
-    user compass
-    group compass misc input
-    disabled
