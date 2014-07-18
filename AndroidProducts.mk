@@ -25,5 +25,7 @@
 # it includes.
 #
 
+LOCAL_PATH := $(call my-dir)
+
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/full_u8150.mk

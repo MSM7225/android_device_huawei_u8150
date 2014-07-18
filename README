@@ -1,7 +1,3 @@
 Copyright 2014 - The CyanogenMod Project
 
 Device configuration for Huawei U8150/Ideos
-
-Pre-Setup
-=========
-Execute "extract-files.sh" to extract prebuilt libraries (from a working device)

@@ -12,35 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/gsm.mk)
-
-# BootAnimation
-TARGET_BOOTANIMATION_NAME := vertical-240x320
+LOCAL_PATH := $(call my-dir)
 
 # Inherit device configuration
-$(call inherit-product, device/huawei/u8150/full_u8150.mk)
+$(call inherit-product, device/huawei/msm7x25-common/full_msm7x25-common.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cm/config/common_mini_phone.mk)
-
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
+# Inherit device configuration
+$(call inherit-product, $(LOCAL_PATH)/full_u8150.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_u8150
 PRODUCT_DEVICE := u8150
-PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := u8150
-PRODUCT_MANUFACTURER := Huawei
-PRODUCT_CHARACTERISTICS := phone
 
 PRODUCT_RELEASE_NAME := U8150/Ideos
 PRODUCT_VERSION_DEVICE_SPECIFIC := -U8150/Ideos
-
-# CyanogenMod Properties
-BOARD_NO_LIVEWALLPAPERS := true
-BOARD_NO_CAMERAEFFECTS := true
-BOARD_NO_HWCODECS := true
-BOARD_HAVE_LOWRAM := true
-BOARD_USE_INSECURESU := true

@@ -1,5 +1,5 @@
 import init.u8150.usb.rc
-import init.u8150.parts.rc
+import init.msm7x25.parts.rc
 
 on early-init
 
@@ -13,13 +13,13 @@ on early-init
     mkdir /mnt/sd-ext 0000 system system
     symlink /mnt/sd-ext /sd-ext
     
-service dhcp-service /system/bin/netcfg eth0 dhcp
+service dhcp-service /system/bin/netcfg wlan0 dhcp
     class main
     oneshot
     
 on property:dev.bootcomplete=1
     stop dhcp-service
-    start dhcp-service
+    start dhcp-service    
     
 on fs
 
@@ -82,19 +82,19 @@ service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     disabled
     oneshot
     
-service wpa_supplicant /system/bin/wpa_supplicant -Dwext -ieth0 -W -c/data/misc/wifi/wpa_supplicant.conf
+service wpa_supplicant /system/bin/wpa_supplicant -Dwext -iwlan0 -W -c/data/misc/wifi/wpa_supplicant.conf
     class main
     group wifi inet
-    socket wpa_eth0 dgram 660 wifi wifi
+    socket wpa_wlan0 dgram 660 wifi wifi
     disabled
     oneshot
 
-service dhcpcd_eth0 /system/bin/dhcpcd -BKL
+service dhcpcd_wlan0 /system/bin/dhcpcd -BKL
     class main
     disabled
     oneshot
 
-service iprenew_eth0 /system/bin/dhcpcd -n
+service iprenew_wlan0 /system/bin/dhcpcd -n
     class main
     disabled
     oneshot
@@ -110,6 +110,18 @@ service iprenew_bnep0 /system/bin/dhcpcd -n
     oneshot
 
 service akmd /system/bin/akmd2
+    class main
+    user compass
+    group compass misc input
+    disabled
+
+service akm8975 /system/bin/akmd8975
+    class main
+    user compass
+    group compass misc input
+    disabled
+
+service akm8962 /system/bin/akmd8962
     class main
     user compass
     group compass misc input
