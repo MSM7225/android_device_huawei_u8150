@@ -20,6 +20,7 @@
 /dev/msm_wma		0660		system		audio
 /dev/msm_wmapro		0660		system		audio
 /dev/oncrpc			0660		radio		system
+/dev/ofn		0777		system		system
 /dev/pmem_audio		0660		system		audio
 /dev/proximity		0640		system		system
 /dev/rtc0		0660		system		radio
