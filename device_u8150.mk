@@ -33,6 +33,7 @@ PRODUCT_COPY_FILES += \
     
 # Bluetooth Config
 PRODUCT_COPY_FILES += \
+    device/huawei/u8150/prebuilt/etc/bluetooth/audio.conf:system/etc/bluetooth/audio.conf \
     device/huawei/u8150/prebuilt/etc/bluetooth/main.conf:system/etc/bluetooth/main.conf
   
 # Wi-Fi related
