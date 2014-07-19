@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# 02setuphuawei
+# 02setuphuawei for BCM4319
 # by Alberto96
 #
 # This script will set up the proper MAC addresses
@@ -57,7 +57,7 @@ echo "New WiFi MAC address                  : $wifimac"
 echo "New Bluetooth MAC address             : $btmac"
 
 # write the addresses to the appropriate configuration files
-cat /system/wifi/nv_4319.txt | busybox sed -e s/$originalmac/$wifimac/g >/data/misc/wifi/nv_4319.txt
+cat /system/etc/nv_4319.txt | busybox sed -e s/$originalmac/$wifimac/g >/data/misc/wifi/nv_4319.txt
 echo $btmac >/data/misc/bluetooth/bdaddr
 
 exit
