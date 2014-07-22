@@ -12,11 +12,6 @@ on early-init
     export SD_EXT_DIRECTORY /mnt/sd-ext
     mkdir /mnt/sd-ext 0000 system system
     symlink /mnt/sd-ext /sd-ext
-    
-on fs
-
-    # framebuffer permission for copybit
-    chmod 0666 /dev/graphics/fb0
 
 on post-fs-data
 
@@ -56,13 +51,6 @@ on boot
     chown system system /sys/bus/platform/devices/msm_sdcc.3/polling
     chown system system /sys/bus/platform/devices/msm_sdcc.4/polling
 
-service hci_qcomm_init /system/bin/log -t qcom-bluetooth -p i "hci_qcomm_init service requested"
-    class main
-    user bluetooth
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-
 service qmuxd /system/bin/qmuxd
     class main
 
@@ -72,58 +60,10 @@ service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     group qcom_oncrpc bluetooth net_bt_admin system
     disabled
     oneshot
-
-service dbus_bt /system/bin/sh /etc/dbus_bt/dbus_bt.sh
-    class main
-    user bluetooth
-    group bluetooth net_bt_admin system sdcard_rw
-    disabled
-    oneshot
-
-service hfag /system/bin/sdptool add --channel=10 HFAG
-    class main
-    user bluetooth
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-
-service hsag /system/bin/sdptool add --channel=11 HSAG
-    class main
-    user bluetooth
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-    
-service opush /system/bin/sdptool add --channel=12 OPUSH
-    class main
-    user bluetooth
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-
-service pbap /system/bin/sdptool add --channel=19 PBAP
-    class main
-    user bluetooth
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-
-service BtWiRfServer /system/xbin/RfTest
-    class main
-    user root
-    group bluetooth net_bt_admin system  
-    disabled
-    oneshot
-
-service SppServer /system/bin/sdptool add --channel=1 SP
-    class main
-    user bluetooth
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
   
 on property:init.svc.wpa_supplicant=stopped
-    stop dhcpcd_eth0  
+    stop dhcpcd_eth0
+    stop iprenew_eth0  
     
 service wpa_supplicant /system/bin/wpa_supplicant \
     -Dwext -ieth0 -W -c/data/misc/wifi/wpa_supplicant.conf
@@ -142,7 +82,11 @@ service iprenew_eth0 /system/bin/dhcpcd -n
     class main
     disabled
     oneshot
-
+    
+on property:init.svc.wpa_supplicant=stopped
+    stop dhcpcd_eth0
+    stop iprenew_eth0
+    
 service dhcpcd_bnep0 /system/bin/dhcpcd -B
     class main
     disabled
@@ -158,7 +102,6 @@ service akmd /system/bin/akmd2
     user compass
     group compass misc input
     disabled
-    oneshot
     
 service dhcp-service /system/bin/netcfg eth0 dhcp
     class main
