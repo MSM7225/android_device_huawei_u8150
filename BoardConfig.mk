@@ -48,4 +48,4 @@ WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/fw_4319.bin nvram_path=/sys
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/huawei/u8150
 TARGET_KERNEL_CONFIG := cyanogen_u8150_defconfig
-BOARD_KERNEL_CMDLINE := mem=211M console=ttyMSM2,115200n8 androidboot.hardware=u8150
+BOARD_KERNEL_CMDLINE := mem=211M console=ttyMSM2,115200n8 androidboot.hardware=u8150 mtdparts=msm_nand:5120k@51200k(boot),5120k@57088k(recovery),1280k@62208k(misc),384k@63488k(splash),235520k@63872k(system),25600k@299392k(cache),199296k@324992k(userdata)
